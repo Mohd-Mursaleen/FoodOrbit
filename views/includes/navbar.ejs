@@ -1,0 +1,47 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div
+    class="container-fluid"
+    style="display: flex !important; justify-content: space-between !important"
+  >
+    <div class="log">
+      <a class="navbar-brand logo nav-link" href="/">Food Orbit</a>
+    </div>
+    <div class="links" style="display: flex; flex-wrap: nowrap">
+      <a class="nav-link active" href="/listings">Menu</a>
+
+      <a class="nav-link" href="/cart"><i class="fas fa-shopping-cart"></i></a>
+      <a
+        class="nav-link dropdown-toggle"
+        href="#"
+        role="button"
+        id="dropdownMenuLink"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fas fa-user"></i>
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-end"
+        aria-labelledby="dropdownMenuLink"
+      >
+        <% if(!currUser){ %>
+        <li><a class="dropdown-item" href="/login">Login</a></li>
+        <li><a class="dropdown-item" href="/signup">Signup</a></li>
+        <% } else{%>
+        <li><a class="dropdown-item" href="/logout">Logout</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+<style>
+  /* Media queries to adjust logo and icon size */
+  @media screen and (max-width: 768px) {
+    .navbar-brand {
+      font-size: 18px; /* Adjust the font size of the logo */
+    }
+    .nav-link i {
+      font-size: 18px; /* Adjust the font size of the icons */
+    }
+  }
+</style>

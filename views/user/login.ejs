@@ -1,0 +1,32 @@
+<% layout('/layout/boilerplate.ejs') -%>
+
+<div class="container-form mt-5">
+  <h2>Login</h2>
+  <form action="/login" method="post" class="login-form">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        class="form-control mb-3"
+        id="password"
+        name="password"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary mb-2" value="Login" />
+    </div>
+    <a href="/signup" class="signup-link">New User? Sign Up</a>
+  </form>
+</div>

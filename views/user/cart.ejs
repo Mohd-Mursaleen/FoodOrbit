@@ -1,0 +1,137 @@
+<% layout('/layout/boilerplate.ejs') -%>
+<style>
+  /* Add your CSS styles here */
+  .orderPanel {
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #545454;
+    border-radius: 15px;
+    width: 90%;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+
+  .orderPanel img {
+    border: 2px solid black;
+    height: 9rem;
+    width: 9rem;
+    border-radius: inherit;
+    margin: 5px;
+    object-fit: cover;
+  }
+
+  .orderInfo {
+    color: wheat;
+    margin-left: 20px;
+    flex: 1;
+    max-width: 60%;
+  }
+
+  .remove {
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .remove button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    transition: color 0.3s;
+  }
+
+  .remove button:hover {
+    color: antiquewhite;
+  }
+
+  .checkout-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .checkout-btn {
+    padding: 10px 30px;
+    background-color: #4480ff;
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem; /* Added bottom margin */
+  }
+
+  .checkout-btn:hover {
+    background-color: #115dfc;
+  }
+
+  .empty {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .empty img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .error-message {
+    color: #545454;
+    margin-bottom: 0.5rem;
+  }
+</style>
+
+<% if(userOrders.length) { %>
+  <% for (let i = 0; i < userOrders.length; i++) { %>
+    <% let order = userOrders[i]; %>
+    <% let isFirstOccurrence = true; %>
+    <% for (let j = i - 1; j >= 0; j--) { %>
+      <% if (userOrders[j].name === order.name) { %>
+        <% isFirstOccurrence = false; %>
+        <% break; %>
+      <% } %>
+    <% } %>
+    <% if (isFirstOccurrence) { %>
+      <div class="orderPanel">
+        <img src="<%= order.image %>" alt="" />
+        <div class="orderInfo">
+          <h2 style="color: white;">
+            <%= order.name %>
+            <% let count = 1; %>
+            <% for (let k = i + 1; k < userOrders.length; k++) { %>
+              <% if (userOrders[k].name === order.name) { %>
+                <% count++; %>
+              <% } %>
+            <% } %>
+            <% if (count > 1) { %>
+              <span>x<%= count %></span>
+            <% } %>
+          </h2>
+          <p><%= order.description %></p>
+          <p><strong>&#8377;<%= order.price %></strong></p>
+        </div>
+        <div class="remove">
+          <form action="/cart/<%= order.id %>?_method=DELETE" method="post">
+            <button type="submit"><i class="fa-solid fa-trash"></i></button>
+          </form>
+        </div>
+      </div>
+    <% } %>
+  <% } %>
+
+  <div class="checkout-container">
+    <a href="/order" class="checkout-btn">Check Out</a>
+  </div>
+<% } else { %>
+  <div class="empty">
+    <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-7359557-6024626.png" alt="" />
+    <h1 class="error-message">Your Cart is Empty!</h1>
+    <p class="error-message">You must add items to your cart before proceeding to checkout.</p>
+    <a href="/listings" class="checkout-btn">RETURN TO SHOP</a>
+  </div>
+<% } %>
+</html>

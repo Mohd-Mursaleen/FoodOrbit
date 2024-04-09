@@ -1,0 +1,69 @@
+<% layout("/layout/boilerplate.ejs") -%>
+
+<body>
+  <header>
+    <div class="panel">
+      <div class="text-catch mb-4">
+        LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN
+      </div>
+      <a class="button glowing" href="/listings" style="text-decoration: none"
+        >Order Now</a
+      >
+    </div>
+  </header>
+
+  <div class="poster">
+    <picture>
+      <!-- Choose image based on screen size -->
+      <source
+        srcset="
+          https://res-console.cloudinary.com/dbel1jon0/media_explorer_thumbnails/ad221c3e564a8374325526772ca60245/detailed
+        "
+        media="(max-width: 768px)"
+      />
+      <source
+        srcset="
+          https://res-console.cloudinary.com/dbel1jon0/media_explorer_thumbnails/9349028c9dcb3432241e0e390452e9a6/detailed
+        "
+        media="(min-width: 769px) and (max-width: 1024px)"
+      />
+      <source
+        srcset="
+          https://res-console.cloudinary.com/dbel1jon0/media_explorer_thumbnails/342cb9291a2c2e6983385b42298ff27a/detailed
+        "
+        media="(min-width: 1025px)"
+      />
+      <!-- Fallback image for older browsers -->
+      <img
+        src="https://res-console.cloudinary.com/dbel1jon0/media_explorer_thumbnails/342cb9291a2c2e6983385b42298ff27a/detailed"
+        alt="Poster Image"
+      />
+    </picture>
+  </div>
+
+  <div class="browse glowing mt-2" style="background-color: #333 !important">
+    <h1 class="browse-text">Browse Categories</h1>
+    <hr />
+  </div>
+
+  <div class="hero-section">
+    <% let count = 0 %> <% for(listing of allListings){ %> <% if (count >= 6) {
+    break; } %>
+    <div class="cards">
+      <a href="/listings/<%=listing.id%>">
+        <img
+          src="<%=listing.image%>"
+          class="card-img-top"
+          alt="Listing Image"
+        />
+        <div class="card-overlays">
+          <div class="card-bodys">
+            <h5 class="card-titles"><%=listing.name%></h5>
+            <p class="card-texts"><%=listing.description %></p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <% count++ %> <% } %>
+  </div>
+</body>

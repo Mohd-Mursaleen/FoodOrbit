@@ -1,0 +1,551 @@
+/* Add your CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222; /* Dark background */
+  color: #fff; /* Light text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.container-fluid {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.boi {
+  flex: 1;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.panel .button {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.panel .button:hover {
+  background-color: #ff7f4d; /* Lighter shade on hover */
+}
+
+.navbar {
+  background-color: #333;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #ff5722 !important;
+}
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch; /* Stretch cards to fill height */
+  padding: 20px;
+}
+
+.cards {
+  width: calc(33.33% - 20px); /* Max 3 cards in a row */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+  background-color: #333; /* Dark background for cards */
+  color: #fff;
+}
+
+.cards:hover {
+  transform: translateY(-10px);
+}
+
+.cards img {
+  width: 100%;
+  height: 200px; /* Increase card height */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card img {
+  width: 100%;
+  height: 200px; /* Increase card height */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cards:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.cards:hover .card-overlays {
+  opacity: 1;
+}
+
+.card-bodys {
+  padding: 15px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.foot-panel1,
+.foot-panel2 {
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 18px;
+}
+
+.glowing {
+  text-shadow: 0 0 10px #ff5722;
+}
+
+.Done {
+  cursor: pointer;
+}
+/* Add your CSS styles here */
+.poster img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.poster {
+  height: 35rem !important;
+  object-fit: cover;
+  /* background-image: url("https://images.ctfassets.net/wtodlh47qxpt/5gf6cz2vMpCLgQ4M4XaUaj/8a10d03ec85203e7439e113d336f949d/Zinger_pro_1440x396px.jpg?w=1680&fit=fill&fm=webp"); */
+}
+.browse {
+  padding-top: 1rem;
+  background-color: #ff5722; /* Red background */
+  text-align: center;
+}
+
+.browse-text {
+  color: white; /* White text */
+}
+.fas {
+  font-size: 1.5rem;
+}
+.h1 {
+  background-color: #ff3333 !important;
+}
+/* // Show page // */
+.preview {
+  height: 100%;
+  position: relative !important;
+  overflow: hidden;
+}
+
+.preview img {
+  width: 100%;
+  transition: transform 0.5s ease !important;
+  border-radius: 10px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.rounded-bottom {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.listing-details {
+  list-style: none;
+  padding: 0;
+}
+
+.listing-details li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+.container-show {
+  margin-top: 5rem !important;
+}
+/* // Menu page ///  */
+/* Add your CSS styles here */
+.menu {
+  padding: 20px;
+  text-align: center;
+}
+.text-catch {
+  color: #ffffff !important;
+}
+
+.menu-container {
+  display: flex;
+  margin-left: 6rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.menu-item {
+  margin: 2rem;
+}
+
+/* Add your CSS styles here */
+.card {
+  position: relative;
+  width: 17.875em;
+  height: 18.5em;
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 120ms;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0.5em;
+  margin-left: 2rem;
+  padding-bottom: 3.4em;
+}
+
+.card .title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 1.875em;
+  font-weight: 400;
+  color: #000;
+}
+
+.card .price {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 0.9em;
+  position: absolute;
+  left: 0.625em;
+  bottom: 0.625em;
+  color: #000;
+}
+
+.card:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
+
+.text {
+  max-width: 55px;
+}
+
+.image {
+  background: rgb(241, 241, 241);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.item-image img {
+  width: 100%;
+  height: 200px; /* Adjusted height */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.item-details {
+  padding: 10px;
+}
+
+.item-name {
+  font-size: 20px; /* Larger font size for name */
+  font-weight: bold;
+  color: #333; /* Dark text */
+  margin-bottom: 5px;
+}
+
+.item-price {
+  font-size: 16px;
+  color: #666; /* Dark gray text */
+}
+
+.button {
+  background-color: #dc3545; /* Red button */
+  color: #fff; /* White text */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff4d5c; /* Lighter shade of red on hover */
+}
+
+.text-catch {
+  font-size: 28px;
+  font-weight: bold;
+  color: #dc3545; /* Red text */
+  text-shadow: 0 0 10px rgba(220, 53, 69, 0.5); /* Red glowing effect */
+}
+
+.glowing {
+  text-shadow: 0 0 10px #dc3545; /* Red glowing effect */
+}
+/* Add your CSS styles here */
+
+/* Show page styles */
+.container-show {
+  padding: 20px;
+}
+
+.preview {
+  margin-bottom: 20px;
+  object-fit: cover;
+  /* Set image width to one-third of the screen */
+}
+
+.preview img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-details {
+  list-style: none;
+  padding: 0;
+}
+
+.listing-details li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+  background-color: #ff5722; /* Orange button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff7f4d; /* Lighter shade on hover */
+}
+
+/* Review card styles */
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.review-card {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #dc3545;
+}
+
+.review-card p {
+  margin: 0;
+}
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .container-show {
+    padding: 10px;
+  }
+
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+}
+h3 {
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.comment {
+  color: #333;
+}
+.reviewName {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: initial;
+  font-size: 1.4rem;
+}
+/* SignUp page  */
+.container-form {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.form-group-s {
+  margin-bottom: 20px;
+}
+.container-form label,
+h2 {
+  color: #000;
+}
+
+.container-form-login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+  color: #007bff;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  border-color: #007bff;
+}
+
+.btn-primary {
+  background-color: #ff5722;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #a23413;
+}
+
+.signup-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #ff5722;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.signup-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+@media (max-width: 1400px) {
+  .poster img {
+    object-fit: fill !important;
+    height: 100% !important;
+  }
+}
+@media (max-width: 768px) {
+  .poster {
+    height: 28rem !important;
+  }
+}
