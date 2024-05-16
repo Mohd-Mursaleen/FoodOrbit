@@ -4,7 +4,7 @@
   "description": "Your application description",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "npm install node app.js"
   },
   "dependencies": {
     "connect-flash": "^0.1.1",
